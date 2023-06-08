@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>시계</title>
+	<style>
+		p {
+		  font-family: verdana;
+		  font-size: 30px;
+		  color: blue;
+		}
+	</style>
+  </head>
+  <body>
+    <h1>시계</h1>
+    <p id="clock"></p>
+
+    <script>
+      // 시계를 업데이트하는 함수
+      function updateClock() {
+        const now = new Date(); // 현재 날짜와 시간을 가져옵니다.
+
+        const hours = now.getHours(); // 현재 시간 (0부터 23까지)
+        const minutes = now.getMinutes(); // 현재 분
+        const seconds = now.getSeconds(); // 현재 초
+
+        const clock = document.getElementById("clock"); // 시계를 표시할 요소를 찾습니다.
+
+        // 시간을 표시할 형식을 지정합니다.
+        const timeString = `${hours}:${minutes < 10 ? "0" + minutes : minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+
+        clock.textContent = timeString; // 시계 요소의 텍스트를 업데이트합니다.
+      }
+
+      // 1초마다 시계를 업데이트합니다.
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
