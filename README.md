@@ -1,2 +1,2 @@
 # 2023_OSS
-## 2023 OSS first semester
+## 2023 OSS 2학년 1학기
